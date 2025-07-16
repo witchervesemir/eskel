@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>İletişim - West Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: #000;
+            color: #ddd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 50px 20px;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #b995ff;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+
+        .contact-info {
+            max-width: 500px;
+            margin: 30px auto 0 auto;
+            background: #2a002a;
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(185, 149, 255, 0.6);
+        }
+
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .contact-info p strong {
+            color: #cfa6ff;
+        }
+
+        .social-links {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .social-links li {
+            margin-bottom: 12px;
+        }
+
+        .social-links a {
+            color: #b995ff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            .contact-info {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="bg-black bg-opacity-90 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <span class="text-4xl font-bold text-purple-400">West Studios</span>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Menü bağlantıları (masaüstü) -->
+                <nav class="hidden md:flex items-center space-x-6 text-lg">
+                    <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+                    <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+                    <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+                    <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+                    <a href="iletisim.html" class="hover:text-purple-400">İletişim</a>
+                </nav>
+            </div>
+
+            <!-- Açılır menü (mobil) -->
+            <div id="mobile-menu" class="hidden flex flex-col space-y-4 pb-4">
+                <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+                <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+                <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+                <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+                <a href="iletisim.html" class="hover:text-purple-400">İletişim</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- İletişim Kartı -->
+    <div class="contact-info">
+        <p><strong>Telefon:</strong> +90 555 123 45 67</p>
+        <p><strong>E-posta:</strong> info@weststudios.com</p>
+        <p><strong>Adres:</strong> Örnek Mah. 123. Sok. No:5, İstanbul</p>
+        <p><strong>Sosyal Medya:</strong></p>
+        <ul class="social-links">
+            <li><a href="https://instagram.com/west_studioss" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li><a href="https://twitter.com/weststudios" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        </ul>
+
+    </div>
+
+    <p class="text-sm text-gray-400 text-center mt-6">
+        Bu sitede kişisel veriler toplanmaz. İletişim yalnızca bilgi amaçlıdır.
+    </p>
+
+
+    <!-- Mobil menü toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
